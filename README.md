@@ -1,5 +1,6 @@
 # Игра "Змейка"
 Эта игра "Змейка" создана с использованием JavaScript, HTML и CSS. Цель игры — управлять змейкой, чтобы съесть как можно больше точек еды, увеличивая её длину. Игра завершается, если змейка столкнётся с самой собой.
+<a href="https://sergey-karpov.github.io/snake-game/" target="_blank">Начать игру</a>
 
 # Функционал игры:
 Управление с клавиатуры (стрелки или WASD).
@@ -30,6 +31,7 @@
 # English:
 # Snake Game
 This Snake game is built using JavaScript, HTML, and CSS. The goal of the game is to control the snake to eat as many food points as possible, growing its length. The game ends if the snake collides with itself.
+<a href="https://sergey-karpov.github.io/snake-game/" target="_blank">Start the game</a>
 
 # Game Features:
 Keyboard control (arrow keys or WASD).
