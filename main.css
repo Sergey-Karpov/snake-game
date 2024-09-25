@@ -1,0 +1,117 @@
+.app__container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+.cell {
+  box-sizing: border-box;
+}
+
+.snake {
+  background-color: red;
+  transition: all 0.1s ease;
+}
+
+.eat {
+  background-color: green;
+}
+
+.to-eat {
+  box-shadow: 0px 0px 5px 3px rgba(255, 0, 0, 0.6);
+  transition: all 0.2s ease;
+}
+
+.restart {
+  position: relative;
+  border: 1px solid red !important;
+}
+
+.restart::after {
+  content: "game over";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 800;
+  color: red;
+}
+
+.result {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+  color: green;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  height: 100px;
+  width: 100px;
+  display: none;
+}
+
+.boost {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  height: 48px;
+  width: 100px;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .buttons {
+    display: block;
+  }
+  .boost {
+    display: block;
+  }
+}
+
+.buttons .top,
+.buttons .right,
+.buttons .bottom,
+.buttons .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.buttons .top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttons .right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.buttons .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttons .left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
