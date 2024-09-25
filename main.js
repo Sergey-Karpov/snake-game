@@ -21,6 +21,16 @@ let moveSnakeSpeed = 300;
 let moveSnakeInterval;
 let isBoosted = false;
 
+const disableContextMenu = (event) => {
+  event.preventDefault(); 
+};
+
+mobileButtonTop.addEventListener("contextmenu", disableContextMenu);
+mobileButtonRight.addEventListener("contextmenu", disableContextMenu);
+mobileButtonBottom.addEventListener("contextmenu", disableContextMenu);
+mobileButtonLeft.addEventListener("contextmenu", disableContextMenu);
+boostButton.addEventListener("contextmenu", disableContextMenu);
+
 const buildFieldGrid = () => {
   field.style.cssText = `
     margin: 0 auto;
