@@ -22,8 +22,13 @@ let moveSnakeInterval;
 let isBoosted = false;
 
 const disableContextMenu = (event) => {
-  event.preventDefault(); 
+  event.preventDefault();
 };
+
+const windowWidth = window.innerWidth;
+let isMobile = windowWidth < 1100;
+
+console.log(isMobile);
 
 mobileButtonTop.addEventListener("contextmenu", disableContextMenu);
 mobileButtonRight.addEventListener("contextmenu", disableContextMenu);
@@ -34,7 +39,7 @@ boostButton.addEventListener("contextmenu", disableContextMenu);
 const buildFieldGrid = () => {
   field.style.cssText = `
     margin: 0 auto;
-    width: 80%;
+    width: ${isMobile ? "100%" : "80%"};
     aspect-ratio: 1 / 1;
     display: grid;
     grid-template-columns: repeat(${fieldLength}, 1fr);
